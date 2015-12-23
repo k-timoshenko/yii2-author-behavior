@@ -6,7 +6,7 @@
  * Email: t.kanstantsin@gmail.com
  */
 
-namespace tkanstantsin\yii2\behaviors\behaviors;
+namespace tkanstantsin\yii2\behaviors;
 
 use yii\base\Event;
 use yii\base\InvalidCallException;
