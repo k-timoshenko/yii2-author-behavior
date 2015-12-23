@@ -1,0 +1,35 @@
+{
+  "name": "t-kanstantsin/yii2-author-behavior",
+  "description": "Author behavior for Yii 2 framework.",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii",
+    "behavior"
+    "yii2",
+    "yii 2"
+  ],
+  "homepage": "https://github.com/t-kanstantsin/yii2-author-behavior",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Konstantin Timoshenko",
+      "email": "t.kanstantsin@gmail.com",
+      "homepage": "https://github.com/t-kanstantsin",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "tkanstantsin\\yii2\\behaviors\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
