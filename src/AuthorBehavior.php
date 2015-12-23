@@ -15,22 +15,22 @@ use yii\db\BaseActiveRecord;
 use yii\db\Expression;
 
 /**
- * CreatedByBehavior automatically fills the specified attributes with the current user id.
+ * AuthorBehavior automatically fills the specified attributes with the current user id.
  *
- * To use CreatedByBehavior, insert the following code to your ActiveRecord class:
+ * To use AuthorBehavior, insert the following code to your ActiveRecord class:
  *
  * ```php
- * use common\behaviors\CreatedByBehavior;
+ * use common\behaviors\AuthorBehavior;
  *
  * public function behaviors()
  * {
  *     return [
- *         CreatedByBehavior::className(),
+ *         AuthorBehavior::className(),
  *     ];
  * }
  * ```
  *
- * By default, CreatedByBehavior will fill the `created_by_id` and `updated_by_id` attributes with the current user id
+ * By default, AuthorBehavior will fill the `created_by_id` and `updated_by_id` attributes with the current user id
  * when the associated AR object is being inserted; it will fill the `updated_by_id` attribute
  * with the user id when the AR object is being updated. The user id value is obtained by `\Yii::$app->user->id`.
  *
@@ -44,7 +44,7 @@ use yii\db\Expression;
  * {
  *     return [
  *         [
- *             'class' => CreatedByBehavior::className(),
+ *             'class' => AuthorBehavior::className(),
  *             'createdByAttribute' => 'create_time',
  *             'updatedByAttribute' => 'update_time',
  *             'value' => function ($event) {
@@ -59,16 +59,12 @@ use yii\db\Expression;
  * the Expression object itself after the record has been saved. If you need the value from DB afterwards you should call
  * the [[\yii\db\ActiveRecord::refresh()|refresh()]] method of the record.
  *
- * CreatedByBehavior also provides a method named [[touch()]] that allows you to assign the current
+ * AuthorBehavior also provides a method named [[touch()]] that allows you to assign the current
  * timestamp to the specified attribute(s) and save them to the database. For example,
  *
  * ```php
  * $model->touch('creation_time');
  * ```
- *
- * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Alexander Kochetov <creocoder@gmail.com>
- * @since 2.0
  */
 class AuthorBehavior extends AttributeBehavior
 {
